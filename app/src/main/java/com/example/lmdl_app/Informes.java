@@ -62,56 +62,48 @@ public class Informes extends AppCompatActivity {
     }
 
     private void calcularEvaluacionglobal() {
-        if(medida.equals("Temperatura")) {
-            if (Double.parseDouble(media) >= 19 && Double.parseDouble(media) <= 21) {
-                evaluacion_text.setText("Muy buena");
-            } else if (Double.parseDouble(media) >= 18 && Double.parseDouble(media) <= 24) {
-                evaluacion_text.setText("Normal");
+        if (medida.equals("Temperatura")) {
+            if (Double.parseDouble(media) >= 5 && Double.parseDouble(media) <= 9) {
+                evaluacion_text.setText("Demasiado baja, ¿vives en una nevera?");
             } else if (Double.parseDouble(media) >= 10 && Double.parseDouble(media) <= 17) {
-                evaluacion_text.setText("Demasiado baja. ¿No tienes frío?");
-            } else if (Double.parseDouble(media) >= 0 && Double.parseDouble(media) <= 10) {
-            evaluacion_text.setText("Esto parece una nevera");
+                evaluacion_text.setText("No es adecuada.");
+            } else if (Double.parseDouble(media) >= 18 && Double.parseDouble(media) <= 21) {
+                evaluacion_text.setText("Adecuada, tu hogar es saludable.");
+            } else if (Double.parseDouble(media) >= 22 && Double.parseDouble(media) <= 25) {
+                evaluacion_text.setText("Más alta que lo recomendado.");
+            } else if (Double.parseDouble(media) >= 25 && Double.parseDouble(media) <= 30) {
+                evaluacion_text.setText("Demasiado alta.");
             } else {
-                evaluacion_text.setText("Mala, demasiado alta.");
+                evaluacion_text.setText("Peligrosa para la salud.");
             }
-        }
-        else if (medida.equals("Humedad")){
-            if(Double.parseDouble(media)>=30 && Double.parseDouble(media)<=50){
+        } else if (medida.equals("Humedad")) {
+            if (Double.parseDouble(media) >= 30 && Double.parseDouble(media) <= 50) {
                 evaluacion_text.setText("La humedad es adecuada.");
-            }
-            else if (Double.parseDouble(media)>=25 && Double.parseDouble(media)<=55){
+            } else if (Double.parseDouble(media) >= 25 && Double.parseDouble(media) <= 55) {
                 evaluacion_text.setText("Normal");
-            }
-            else {
+            } else {
                 evaluacion_text.setText("Mala");
             }
-        }
-
-        else if (medida.equals("Calidad del aire")) {
-                if (Double.parseDouble(media) >= 0 && Double.parseDouble(media) <= 50) {
-                    evaluacion_text.setText("Muy buena");
-                } else if (Double.parseDouble(media) >= 51 && Double.parseDouble(media) <= 100) {
-                    evaluacion_text.setText("Normal");
-                } else if (Double.parseDouble(media) >= 101 && Double.parseDouble(media) <= 150) {
-                    evaluacion_text.setText("Mala, aconsejamos abrir la ventana.");
-                } else if (Double.parseDouble(media) >= 151 && Double.parseDouble(media) <= 300) {
-                    evaluacion_text.setText("Dañina para la salud");
-                } else {
-                    evaluacion_text.setText("Peligrosa");
-                }
-            }
-        }
-
-       /*else if(medida.equals("Luminosidad")){
-            if(Double.parseDouble(media)>=300 && Double.parseDouble(media)<=500){
+        } else if (medida.equals("Calidad del aire")) {
+            if (Double.parseDouble(media) >= 0 && Double.parseDouble(media) <= 50) {
                 evaluacion_text.setText("Muy buena");
+            } else if (Double.parseDouble(media) >= 51 && Double.parseDouble(media) <= 100) {
+                evaluacion_text.setText("Moderada");
+            } else if (Double.parseDouble(media) >= 101 && Double.parseDouble(media) <= 150) {
+                evaluacion_text.setText("Dañina para grupos sensibles, aconsejamos abrir la ventana.");
+            } else if (Double.parseDouble(media) >= 151 && Double.parseDouble(media) <= 300) {
+                evaluacion_text.setText("Dañina para la salud");
+            } else {
+                evaluacion_text.setText("Peligrosa para la salud");
             }
-            else if (Double.parseDouble(media)>=200 && Double.parseDouble(media)<=800){
-                evaluacion_text.setText("Normal");
-            }
-            else {
-                evaluacion_text.setText("Mala");
+        } else if (medida.equals("Luminosidad")) {
+            if (Double.parseDouble(media) >= 300 && Double.parseDouble(media) <= 500) {
+                evaluacion_text.setText("Muy buena.");
+            } else if (Double.parseDouble(media) >= 200 && Double.parseDouble(media) <= 800) {
+                evaluacion_text.setText("Aceptable.");
+            } else {
+                evaluacion_text.setText("Mala.");
             }
         }
-    }*/
+    }
 }
