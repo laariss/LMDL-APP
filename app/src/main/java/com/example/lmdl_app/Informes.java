@@ -67,8 +67,10 @@ public class Informes extends AppCompatActivity {
                 evaluacion_text.setText("Muy buena");
             } else if (Double.parseDouble(media) >= 18 && Double.parseDouble(media) <= 24) {
                 evaluacion_text.setText("Normal");
-            } else if (Double.parseDouble(media) <= 17) {
-                evaluacion_text.setText("Mala, demasiado baja.");
+            } else if (Double.parseDouble(media) >= 10 && Double.parseDouble(media) <= 17) {
+                evaluacion_text.setText("Demasiado baja. ¿No tienes frío?");
+            } else if (Double.parseDouble(media) >= 0 && Double.parseDouble(media) <= 10) {
+            evaluacion_text.setText("Esto parece una nevera");
             } else {
                 evaluacion_text.setText("Mala, demasiado alta.");
             }
