@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="296dp"
+        android:layout_height="36dp"
+        android:text="HISTORIAL DE ALERTAS"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <ScrollView
+        android:layout_width="358dp"
+        android:layout_height="516dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:fadeScrollbars="false">
+
+            <TableLayout
+                android:id="@+id/tablaRegistros"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:isScrollContainer="true"
+                android:padding="10dip"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textFecha"
+                        android:layout_width="87dp"
+                        android:layout_height="match_parent"
+                        android:text="FECHA"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/textHora"
+                        android:layout_width="79dp"
+                        android:layout_height="match_parent"
+                        android:text="HORA"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textInfo"
+                        android:layout_width="179dp"
+                        android:layout_height="match_parent"
+                        android:text="INFORMACION"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
